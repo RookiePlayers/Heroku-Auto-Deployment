@@ -9,8 +9,8 @@ export const checkShallow = (): void => {
     console.log("git unshallow repository🔄");
   }
 };
-export const gitStack = (AppName: string): void => {
-  execSync("heroku stack:set heroku-22");
+export const gitStack = (AppName: string, herokuStack: string): void => {
+  execSync(`heroku stack:set ${herokuStack}`);
   execSync("heroku plugins:install heroku-repo");
   execSync(`heroku repo:reset -a ${AppName}`);
 };
