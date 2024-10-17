@@ -8,6 +8,9 @@ inputs:
   herokuApiKey:
     description: "Heroku API key"
     required: true
+  herokuStack:
+    description: "Heroku Stack"
+    required: false
   useDocker:
     description: "Deploy the container image (Dockerfile) to Heroku"
     default: "false"
