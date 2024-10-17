@@ -10,6 +10,7 @@ inputs:
     required: true
   herokuStack:
     description: "Heroku Stack"
+    default: "heroku-24"
     required: false
   useDocker:
     description: "Deploy the container image (Dockerfile) to Heroku"
