@@ -1,5 +1,5 @@
-name: "Heroku Auto Deployment"
-author: "Elay Gelbart"
+name: "Heroku Deployment Plus"
+author: "Olamide Ogunlade"
 description: "Heroku Deployment"
 inputs:
   herokuAppName:
