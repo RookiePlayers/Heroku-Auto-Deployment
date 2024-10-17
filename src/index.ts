@@ -16,7 +16,7 @@ import gitDeployment from "./git/main";
       dockerDeployment(appName);
     } else {
       console.log("🐈 deployment with Git 🐈");
-      gitDeployment(appName, HerokuApiKey, herokuStack);
+      gitDeployment(appName, HerokuApiKey, herokuStack??'heroku-22');
     }
   } catch (error) {
     core.setFailed(error as string);
