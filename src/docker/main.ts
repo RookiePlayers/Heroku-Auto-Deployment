@@ -1,12 +1,13 @@
 import * as core from "@actions/core";
 import { execSync } from "child_process";
-import {gitStack} from '../git/utils
+import { gitStack } from "../git/utils";
+
 const dockerDeploymentFn = (AppName: string, herokuStack: string) => {
   try {
     execSync("heroku container:login");
     core.info("✅ logged the container ✅");
     const appDir = core.getInput("dir");
-    gitStack(Appname, herokuStack)
+    gitStack(AppName, herokuStack)
     execSync(
       `heroku container:push web -a ${AppName}`,
       appDir ? { cwd: appDir } : {}

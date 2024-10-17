@@ -13,7 +13,7 @@ import gitDeployment from "./git/main";
     const useDocker = core.getBooleanInput("useDocker");
     if (useDocker) {
       console.log("🐋 deployment with Docker 🐋");
-      dockerDeployment(appName herokuStack??'heroku-22');
+      dockerDeployment(appName, herokuStack??'heroku-22');
     } else {
       console.log("🐈 deployment with Git 🐈");
       gitDeployment(appName, HerokuApiKey, herokuStack??'heroku-22');
